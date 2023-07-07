@@ -1,0 +1,93 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper
+{
+    /* General Properties */
+    width: 100vw;
+    height: 100vh;
+
+    /* Grid properties */
+    display: grid;
+    grid-template-columns: 300px 4fr 300px;
+    grid-template-rows:150px 50px auto 50px auto;
+}
+
+div
+{
+    /* General properties */
+
+    /* Border properties */
+    border-style: solid;
+
+    /* Text properties */
+    text-align: center;
+}
+
+.header
+{
+    grid-column: 2/-1;
+
+    background-color: white;
+}
+
+.dashboard
+{
+    grid-row: 1/-1;
+
+    background-color: rgb(36, 168, 245);
+}
+
+.projectsTitle, .announcmentsTitle, .trendingTitle
+{
+    /* General properties */
+    align-self: end;
+    justify-self: start;
+    margin-left: 20px;
+    background-color: whitesmoke;
+}
+
+.projects
+{
+    /* General Properties */
+    padding: 50px 20px 20px 20px;
+
+    /* Main grid properties */
+    grid-row: 3/-1;
+
+    /* Sub grid properties */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: 200px;
+    gap: 4vh;
+
+    /* Main */
+    background-color: whitesmoke;
+}
+
+.projectChild
+{
+    /* General Properties */
+    min-width: 300px;
+    min-height: 200px;
+    max-height: 200px;
+}
+
+.announcments
+{
+    background-color: whitesmoke;
+}
+
+.trendingTitle
+{
+    background-color: whitesmoke;
+}
+
+.trending
+{
+    background-color: whitesmoke;
+}
