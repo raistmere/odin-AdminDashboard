@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 16px;
 }
 
 .wrapper
@@ -22,11 +23,8 @@ div
     /* General properties */
 
     /* Border properties */
-    border-style: solid;
-    border-width: 1px;
-
-    /* Text properties */
-    text-align: center;
+    /* border-style: solid;
+    border-width: 1px; */
 }
 
 .header
@@ -45,28 +43,82 @@ div
 .header .topBar
 {
     /* General properties */
-    align-content: center;
-    justify-content: start;
-    padding-left: 20px;
-    padding-right: 20px;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
 
     /* Sub grid properties */
     display: grid;
-    grid-template-columns: 50px minmax(100px, 1fr) 1fr 50px 50px minmax(50px, 200px);
-    column-gap: 20px;
+    grid-template-columns: auto minmax(100px, 2fr) 1fr auto auto auto;
+    column-gap: 30px;
 }
 
 .searchBar
 {
+    /* General properties */
     width: 100%;
+    height: 30px;
+    background-color: rgb(235, 235, 236);
+
+    /* Bar properties */
+    border-radius: 15px;
+    border-style: none;
+}
+
+.topAccountName
+{
+    /* Text properties */
+    font-weight: bold;
 }
 
 .header .botBar
 {
+    /* General properties */
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+
     /* Sub grid properties */
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: auto auto 1fr auto auto auto;
+    column-gap: 20px;
+
+    /* Box shadow properties */
+    box-shadow: 0 0.3em 0.3em rgba(0, 0, 0, 0.2);
 }
+
+.botGreeting > *
+{
+    /* Text properties */
+    text-align: start;
+    font-weight: bold;
+}
+
+.botGreeting .botAccountName
+{
+    font-size: 24px;
+}
+
+.newButton, .uploadButton, .shareButton
+{
+    /* General properties */
+    width: 100px;
+    height: 40px;
+    background-color: rgb(29, 148, 218);
+
+    /* Border properties */
+    border-radius: 20px;
+    border-style: none;
+
+    /* Text properties */
+    color: white;
+}
+
+.newButton:active, .uploadButton:active, .shareButton:active
+{
+    background-color: rgb(21, 110, 161);
+}
+
 
 .dashboard
 {
@@ -110,17 +162,7 @@ div
     max-height: 200px;
 }
 
-.announcments
-{
-    background-color: whitesmoke;
-}
-
-.trendingTitle
-{
-    background-color: whitesmoke;
-}
-
-.trending
+.announcments, .trending
 {
     background-color: whitesmoke;
 }
