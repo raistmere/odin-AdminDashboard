@@ -7,11 +7,44 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Admin Dashboard</title>
         <link rel="stylesheet" href="styles.css">
+        <script src="https://kit.fontawesome.com/f074f45149.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
         <div class="wrapper">
-            <div class="header">header</div>
+            <div class="header">
+                <div class="topBar">
+                    <div class="topSearchIcon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <form action="">
+                        <input type="text" class="searchBar" name="search">
+                    </form>
+
+                    <!-- A bandaid fix: Empty grid cell to take up empty space -->
+                    <span></span>
+
+                    <div class="topBellIcon">
+                        <i class="fa-regular fa-bell"></i>
+                    </div>
+                    <div class="topAvatar">
+                        <i class="fa-solid fa-circle-user fa-2xl"></i>
+                    </div>
+                    <div class="topAccountName">Morgan Oakley</div>
+                </div>
+                <div class="botBar">
+                    <div class="botAvatar">[AVATAR]</div>
+                    <div class="botGreeting">
+                        <div>Hi there,</div>
+                        <div class="botAccountName">Morgan Oakley(@morgan)</div>
+                    </div>
+                    <div class="botButtons">
+                        <button class="newButton">New</button>
+                        <button class="uploadButton">Upload</button>
+                        <button class="shareButton">Share</button>
+                    </div>
+                </div>
+            </div>
             <div class="dashboard">dashboard</div>
             <div class="projectsTitle">
                 <div>Your Projects</div>
