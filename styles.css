@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 16px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .wrapper
@@ -122,9 +123,74 @@ div
 
 .dashboard
 {
+    /* General Properties */
+    padding: 20px;
+    background-color: rgb(29, 148, 218);
+
+    /* Main grid properties */
     grid-row: 1/-1;
 
-    background-color: rgb(36, 168, 245);
+    /* Sub grid properties */
+    display: grid;
+    grid-template-rows: 50px 250px 125px;
+    row-gap: 25px;
+}
+
+.dashboard .dashTop
+{
+    /* General properties */
+    align-items: center;
+    justify-content: start;
+
+    /* Sub grid properties */
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 10px;
+}
+
+.dashboard .topText
+{
+    /* Text properties */
+    font-size: 30px;
+    color: white;
+}
+
+.dashboard .dashMid
+{
+    /* General properties */
+    align-items: center;
+    justify-content: start;
+
+    /* Sub grid properties */
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 10px;
+}
+
+.dashMid > *
+{
+    /* Text properties */
+    font-size: 18px;
+    color: white;
+}
+
+.dashboard .dashBot
+{
+    /* General properties */
+    align-items: center;
+    justify-content: start;
+
+    /* Sub grid properties */
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 10px;
+}
+
+.dashBot > *
+{
+    /* Text properties */
+    font-size: 18px;
+    color: white;
 }
 
 .projectsTitle, .announcmentsTitle, .trendingTitle
