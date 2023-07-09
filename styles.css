@@ -196,16 +196,19 @@ div
 .projectsTitle, .announcmentsTitle, .trendingTitle
 {
     /* General properties */
-    align-self: end;
-    justify-self: start;
-    margin-left: 20px;
+    height: 50px;
+    padding-left: 20px;
     background-color: whitesmoke;
+
+    /* Flex properties */
+    display: flex;
+    align-items: flex-end;
 }
 
 .projects
 {
     /* General Properties */
-    padding: 50px 20px 20px 20px;
+    padding: 5px 20px 20px 20px;
 
     /* Main grid properties */
     grid-row: 3/-1;
@@ -220,13 +223,105 @@ div
     background-color: whitesmoke;
 }
 
-.projectChild
+.projectBox
 {
     /* General Properties */
     min-width: 300px;
     min-height: 200px;
     max-height: 200px;
+
+    /* Border properties */
+    border-radius: 10px;
+
+    /* Sub grid properties */
+    display: grid;
+    grid-template-columns: 10px auto;
+    grid-template-rows: auto 75px;
+
+
+    /* Box shadow properties */
+    box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.2);
 }
+
+.projectBox .boxAccent
+{
+    /* General properties */
+    background-color: rgb(250, 184, 62);
+
+    /* Border properties */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+    /* Main grid properties */
+    grid-column: 1/2;
+    grid-row: 1/-1;
+
+    /* Box shadow properties */
+    box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.2);
+}
+
+.projectBox .boxText
+{
+    /* General properties */
+    padding: 30px 20px 20px 20px;
+    background-color: white;
+
+    /* Main grid properties */
+    grid-column: 2/-1;
+
+    /* Sub grid properties */
+    display: grid;
+    grid-template-rows: 24px auto;
+
+    /* Border properties */
+    border-top-right-radius: 10px;
+}
+
+.boxText span
+{
+    /* Text properties */
+    font-weight: bold;
+}
+
+.boxText p
+{
+    /* Text properties */
+    font-family: Arial;
+    font-size: 14px;
+}
+
+.projectBox .boxIcons
+{
+    /* General properties */
+    padding: 20px;
+    background-color: white;
+    
+
+    /* Flex properties */
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 25px;
+
+    /* Border properties */
+    border-bottom-right-radius: 10px;
+}
+
+.boxIcons button
+{
+    /* General properties */
+    background-color: white;
+
+    /* Border properties */
+    border: none;
+}
+
+.boxIcons i:hover
+{
+    
+    color: rgb(29, 148, 218);
+}
+
 
 .announcments, .trending
 {
