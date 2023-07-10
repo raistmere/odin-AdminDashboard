@@ -16,7 +16,7 @@
     /* Grid properties */
     display: grid;
     grid-template-columns: 300px 4fr 300px;
-    grid-template-rows:150px 50px auto 50px auto;
+    grid-template-rows:150px 50px 300px 50px 300px auto;
 }
 
 div
@@ -323,8 +323,90 @@ div
     color: rgb(29, 148, 218);
 }
 
-
-.announcments, .trending
+.announcments
 {
-    background-color: whitesmoke;
+    /* General properties */
+    padding: 5px 20px 5px 20px;
+    background-color: rgb(226, 237, 243);
+}
+
+.announcmentsBox
+{
+    /* General properties */
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: white;
+
+    /* Border properties */
+    border-radius: 10px;
+
+    /* Sub grid properties */
+    display: grid;
+    grid-template-rows: 1fr 1px 1fr 1px 1fr;
+    gap: 10px;
+
+    /* Box shadow properties */
+    box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.2);
+}
+
+.announcmentsChild p
+{
+    /* Hide overflow properties */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+
+    /* Text properties */
+    font-family: Arial;
+    font-size: 14px;
+}
+
+.trending
+{
+    /* General properties */
+    padding: 20px;
+    background-color: rgb(226, 237, 243);
+
+    /* Parent grid properties */
+    grid-row: 5/-1;
+}
+
+.trendingBox
+{
+    /* General properties */
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    background-color: white;
+
+    /* Border properties */
+    border-radius: 10px;
+
+    /* Sub grid properties */
+    display: grid;
+    grid-template-rows: repeat(4, 50px);
+    row-gap: 20px;
+}
+
+.trendingAccount
+{
+    /* General properties */
+    align-items: center;
+
+    /* Sub grid properties */
+    display: grid;
+    grid-template-columns: 50px auto;
+    grid-template-rows: 25px 25px;
+    column-gap: 10px
+}
+
+.trendingAccount .accountIcon
+{
+    /* General properties */
+
+    /* Parent grid properties */
+    grid-column: 1/2;
+    grid-row: 1/-1;
 }
